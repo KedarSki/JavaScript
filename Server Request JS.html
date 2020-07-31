@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+    let carsJSONURL = 'http://13.xx.xxx.xx/cars.php';
+
+    fetch(carsJSONURL)
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            let cars = data;
+            console.log(cars);
+
+            cars.push("VW", "Rolls Royce");
+            console.log(cars);
+        });
+    </script>
+</body>
+
+</html>
